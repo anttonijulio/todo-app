@@ -37,7 +37,7 @@ class TodoProvider extends ChangeNotifier {
 
     if (index != -1) {
       // update task to "not done" status and move back to the _todos list
-      Todo undoneTodo = _doneTodos[index].copyWith(isDone: false);
+      final undoneTodo = _doneTodos[index].copyWith(isDone: false);
       _doneTodos.removeAt(index);
       _todos.add(undoneTodo);
       notifyListeners();
